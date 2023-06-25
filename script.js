@@ -12,9 +12,11 @@ function displaytasks() {
     let ihtml = '';
     for (let i = 0; i < tasks.length; i++) {
         ihtml += `
+        <div id="taskcontainer">
         <div id="taskItem">
-            <div id="border"><li>${tasks[i].task}</li></div>
+            <div><li>${tasks[i].task}</li></div>
             <button class="done">Done</button>
+        </div>
         </div>
         `;
     }

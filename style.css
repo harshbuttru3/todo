@@ -4,10 +4,11 @@ body{
     padding: 0;
     color: rgb(255, 255, 255);
     background-color: rgb(16, 102, 102);
+    
 
 }
 nav{
-    background-color: grey;
+    background-color: #383F51;
     margin-top: 0px;
     display: flex;
     justify-content: space-between;
@@ -40,70 +41,102 @@ a{
     border-radius: 5px;
 }
 #save{
-    width: 15%;
-    height: 70%;
+    width: 74px;
+    height: 86%;
     border-radius: 10px;
 }
 #lists{
     display: flex;
-    flex-direction: column;
-    border: 2px solid blue;
-    height:60vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(48, 67, 67);
+    min-height: 80vh;
+    overflow: auto;
+    padding-inline-start: 10px;
+}
+#taskcontainer{
+    margin: 20px;
+    height: 150px;
+    border: 2px solid rgb(48, 109, 223);
+    width: 200px;
+    padding: 5px;
+    position: relative;
+    background-color: #3C4F76;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px #AB9F9D;
 }
 #taskItem{
-    font-size: 43px;
+    font-size: 20px;
     display: flex;
-    margin: 20px;
+    flex-direction: column;
+   position: relative;
 
 }
 .done{
     margin: 10px ;
-    width: 80px;
-    height: 55px;
+    width: 75px;
+    height: 30px;
     border-radius: 5px;
+    position: absolute;
+    top:104px;
+    left: 110px;
+    /* bottom:10px; */
+    /* right:10px; */
+   
 }
-#border{
-    border: 2px solid black;
-    width: 70vw;
-}
+
 
 @media (max-width: 768px) {
     body{
-        background-color: rgb(211, 29, 114);
+        background-color: #4A4E69;
         overflow: hidden;
     }
     h1{
         font-size: 15px;
     }
     #main {
-        width: 90vw;
-        margin: 10px auto;
-        background-color: black;
+        width: 100vw;
+        margin: 10px 0px;
+        background-color: #3C4F76;
+        padding: 10px 0 10px 0;
     }
 
     #taskInput {
-        width: 70%;
-        margin: auto 15px auto 5%;
+        margin: 20px;
+        width: 68%;
+        margin: auto 15px auto 10px;
+        font-size: 20px;
     }
-
+    .done{
+        position: absolute;
+        top: 90px;
+        margin: 10px;
+        bottom: 20;
+        border-radius: 5px;
+    }
     #save {
         width: 15%;
     }
 
     #lists {
         height: 75vh;
+        overflow:auto;
         -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     background-color: rgb(1, 116, 96);
+    
+    /* flex-direction: column;
+    flex-wrap:nowrap; */
+    }
+    #taskcontainer{
+        height: 150px;
     }
     #taskItem{
         font-size: 25px;
         display: flex;
         margin: 20px 0px;
-        height: auto;
-    
+        /* height: auto; */
+        align-self: flex-end;
     }
     #border{
         border: 2px solid black;
